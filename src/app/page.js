@@ -16,11 +16,11 @@ async function getData() {
 
 export default async function Home() {
   const articles = await getData();
-  console.log(articles);
+
   return (
     <main className="flex min-h-screen flex-col p-24">
       <div className="mb-10">
-        <h2>dynamic route</h2>
+        <h2 className="text-xl underline">dynamic route with simple</h2>
         <div>
           {datas?.map((data, index) => (
             <Link href={`dynamicroutes/withssr/${data.id}`}>
@@ -30,13 +30,35 @@ export default async function Home() {
         </div>
       </div>
       <div className="mb-10">
-        <h2>article</h2>
+        <h2 className="text-xl underline">
+          dynamic route with catch all route
+        </h2>
+        <Link href={`dynamicroutes/catch-all-segments/shop/a/b/c/d/e`}>
+          pergi ke dynamicroutes/catch-all-segments/shop/a/b/c/d/e
+        </Link>
+      </div>
+      <div className="mb-10">
+        <h2 className="text-xl underline">
+          dynamic route with [optional] catch all route
+        </h2>
+        <Link href={`dynamicroutes/optional-catch-all-segments/shop`}>
+          pergi ke dynamicroutes/optional-catch-all-segments/shop
+        </Link>
+      </div>
+      <div className="mb-10">
+        <h2 className="text-xl underline">article with generateStaticParams</h2>
         <div>
           {articles?.map((item, index) => (
             <Link href={`articles/${item.id}`}>
               <p>{item.id}</p>
             </Link>
           ))}
+        </div>
+      </div>
+      <div className="mb-10">
+        <h2 className="text-xl underline">Loading</h2>
+        <div>
+          <Link href={`/routing/loading`}>Klik loading</Link>
         </div>
       </div>
     </main>
