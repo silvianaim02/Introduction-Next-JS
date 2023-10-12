@@ -81,6 +81,16 @@ export default async function Home() {
           </Link>
         </div>
       </div>
+      <div className="mb-10">
+        <h2 className="text-xl underline">
+          Parallel Routes Conditional (auth case)
+        </h2>
+        <div>
+          <Link href={`/routing/parallel-routes-conditional`}>
+            Klik Parallel Routes Conditional
+          </Link>
+        </div>
+      </div>
     </main>
   );
 }
