@@ -61,6 +61,18 @@ export default async function Home() {
           <Link href={`/routing/loading`}>Klik loading</Link>
         </div>
       </div>
+      <div className="mb-10">
+        <h2 className="text-xl underline">Error handling</h2>
+        <div>
+          <Link href={`/routing/error`}>Klik error</Link>
+        </div>
+      </div>
+      <div className="mb-10">
+        <h2 className="text-xl underline">Parallel Routes</h2>
+        <div>
+          <Link href={`/routing/parallel-routes`}>Klik Parallel Routes</Link>
+        </div>
+      </div>
     </main>
   );
 }
