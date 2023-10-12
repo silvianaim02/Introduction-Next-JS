@@ -73,6 +73,14 @@ export default async function Home() {
           <Link href={`/routing/parallel-routes`}>Klik Parallel Routes</Link>
         </div>
       </div>
+      <div className="mb-10">
+        <h2 className="text-xl underline">Parallel Routes Modals</h2>
+        <div>
+          <Link href={`/routing/parallel-routes-modal/login`}>
+            Klik Parallel Routes Modal
+          </Link>
+        </div>
+      </div>
     </main>
   );
 }
