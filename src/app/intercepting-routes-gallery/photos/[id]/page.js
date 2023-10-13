@@ -1,10 +1,8 @@
 import Frame from '@/components/frame/Frame';
 import swagPhotos from '@/photos';
 
-export default function PhotoPage({ params }) {
-  const { id: photoId } = params;
-  const photos = swagPhotos;
-  const photo = photos.find((p) => p.id === photoId);
+const PhotoPage = ({ params: { id } }) => {
+  const photo = swagPhotos.find((p) => p.id === id);
 
   return (
     <div className="container mx-auto my-10">
@@ -13,4 +11,6 @@ export default function PhotoPage({ params }) {
       </div>
     </div>
   );
-}
+};
+
+export default PhotoPage;

@@ -23,7 +23,7 @@ export default async function Home() {
         <h2 className="text-xl underline">dynamic route with simple</h2>
         <div>
           {datas?.map((data, index) => (
-            <Link href={`dynamicroutes/withssr/${data.id}`}>
+            <Link key={index} href={`dynamicroutes/withssr/${data.id}`}>
               <p>{data.id}</p>
             </Link>
           ))}
@@ -49,7 +49,7 @@ export default async function Home() {
         <h2 className="text-xl underline">article with generateStaticParams</h2>
         <div>
           {articles?.map((item, index) => (
-            <Link href={`articles/${item.id}`}>
+            <Link key={index} href={`articles/${item.id}`}>
               <p>{item.id}</p>
             </Link>
           ))}

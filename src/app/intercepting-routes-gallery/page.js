@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import swagPhotos from '../../photos';
+import swagPhotos from '@/photos';
 import Image from 'next/image';
 
 export default function Home() {
@@ -11,15 +11,13 @@ export default function Home() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 auto-rows-max	 gap-6 m-10">
         {photos.map(({ id, imageSrc }) => (
           <Link key={id} href={`/intercepting-routes-gallery/photos/${id}`}>
-            <div className="bg-red-300 p-6">
-              <Image
-                alt=""
-                src={imageSrc}
-                height={500}
-                width={500}
-                className=" w-full object-cover aspect-square"
-              />
-            </div>
+            <Image
+              alt=""
+              src={imageSrc}
+              height={500}
+              width={500}
+              className="w-full object-cover aspect-square"
+            />
           </Link>
         ))}
       </div>

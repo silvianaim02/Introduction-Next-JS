@@ -12,7 +12,7 @@ export default async function Page() {
           <h2 className="text-xl underline">dynamic route with simple</h2>
           <div>
             {datas?.map((data, index) => (
-              <Link href={`dynamicroutes/withssr/${data.id}`}>
+              <Link key={index} href={`dynamicroutes/withssr/${data.id}`}>
                 <p>{data.id}</p>
               </Link>
             ))}
