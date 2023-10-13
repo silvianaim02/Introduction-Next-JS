@@ -91,6 +91,12 @@ export default async function Home() {
           </Link>
         </div>
       </div>
+      <div className="mb-10">
+        <h2 className="text-xl underline">Intercepting routes gallery</h2>
+        <div>
+          <Link href={`/intercepting-routes-gallery`}>Klik Gallery</Link>
+        </div>
+      </div>
     </main>
   );
 }
